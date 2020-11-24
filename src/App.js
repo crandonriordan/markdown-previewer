@@ -4,11 +4,21 @@ import Previewer from "./components/Previewer";
 import "./styles/App.css";
 
 class App extends React.Component {
+
+  state = {};
+
+  handleChange = (event) => {
+    const text = event.target.value;
+    this.setState({text: text});
+  }
+
   render() { 
     return (
       <div className="flex-container">
-        <Editor />
-        <Previewer />
+        <Editor 
+          onChange={(event) => this.handleChange(event)} 
+          text={this.state.text} />
+        <Previewer text={this.state.text} />
       </div>
     );
     }

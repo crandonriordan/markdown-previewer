@@ -1,11 +1,21 @@
 .flex-container {
     display: flex;
+    
+}
+
+.preview-header {
+    text-align: center;
+}
+
+.editor-container {
     justify-content: center;
     text-align: center;
 }
 
 .flex-child {
+    padding: 1em;
     flex: 1;
+    height: 100vh;
     border-radius: 5px;
     box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
               0 2px 2px rgba(0,0,0,0.12), 
@@ -24,5 +34,7 @@ hr {
 }
 
 textarea {
-    width: 90%;
+    box-sizing: border-box; /* fit parent width */
+    height: 75%;
+    width: 90%
 }
